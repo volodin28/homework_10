@@ -38,7 +38,7 @@ def exchange_view(request):
                     rate = rates.order_by('-date').order_by('-sell')
                     latest_rate = rate.first()
                     exchange_rate = latest_rate.sell
-                    converted_amount = sell_amount * exchange_rate
+                    converted_amount = round(sell_amount * exchange_rate, 2)
                 else:
                     converted_amount = None
             elif sell_currency == "UAH":
@@ -47,7 +47,7 @@ def exchange_view(request):
                     rate = rates.order_by('-date').order_by('-buy')
                     latest_rate = rate.first()
                     exchange_rate = latest_rate.buy
-                    converted_amount = sell_amount / exchange_rate
+                    converted_amount = round(sell_amount / exchange_rate, 2)
                 else:
                     converted_amount = None
 

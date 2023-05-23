@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Exchange Rate Result</title>
-</head>
-<body>
-    <h1>Exchange Rate Result</h1>
-    <p>Sell Currency: {{ sell_currency }}</p>
-    <p>Buy Currency: {{ buy_currency }}</p>
-    <p>Sell Amount: {{ sell_amount }}</p>
-    <p>Converted Amount: {{ converted_amount }}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+
+{% block content %}
+    <div class="w-50 container">
+        <h1 class="row my-5">Exchange Rate Result</h1>
+
+        <div class="container-fluid">
+            <p><b>Sell Currency:</b> {{ sell_currency }}</p>
+            <p><b>Buy Currency:</b> {{ buy_currency }}</p>
+            <p><b>Sell Amount:</b> {{ sell_amount }}</p>
+            <p><b>Converted Amount:</b> {{ converted_amount }}</p>
+        </div>
+
+    </div>
+
+{% endblock %}
