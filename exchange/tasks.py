@@ -1,7 +1,13 @@
 import datetime
 
 from .models import Rate
-from .exchange_provider import MonoExchange, PrivatExchange, NBUExchange, OschadbankExchange, KredoBankExchange
+from .exchange_provider import (
+    MonoExchange,
+    PrivatExchange,
+    NBUExchange,
+    OschadbankExchange,
+    KredoBankExchange,
+)
 
 from celery import shared_task
 

@@ -7,7 +7,7 @@ from celery.schedules import crontab
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "exchange_rates.settings")
 
 app = Celery("exchange_rates")
-periodicity = crontab(minute='*/5')  # scedule every 5 min
+periodicity = crontab(minute="*/5")  # scedule every 5 min
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.

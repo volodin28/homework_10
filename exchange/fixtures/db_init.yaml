@@ -1,0 +1,18 @@
+- model: exchange.rate
+  pk: 1
+  fields:
+    date: 2023-06-04
+    vendor: mono
+    currency_a: USD
+    currency_b: EUR
+    sell: 1.3
+    buy: 1.4
+- model: exchange.rate
+  pk: 2
+  fields:
+    date: 2023-06-04
+    vendor: privat
+    currency_a: USD
+    currency_b: EUR
+    sell: 1.3
+    buy: 1.4
