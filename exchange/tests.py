@@ -14,6 +14,7 @@ root = pathlib.Path(__file__).parent
 def mocked():
     def inner(file_name):
         return json.load(open(root / "fixtures" / file_name))
+
     return inner
 
 
